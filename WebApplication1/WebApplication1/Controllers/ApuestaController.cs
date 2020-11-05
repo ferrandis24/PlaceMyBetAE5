@@ -11,6 +11,7 @@ namespace WebApplication1.Controllers
     public class ApuestaController : ApiController
     {
         // GET: api/Apuesta
+        [Authorize(Roles = "standard")]
         public ApuestaDTO Get()
         {
             var repo = new ApuestaRepository();
